@@ -4,10 +4,13 @@
     --soft-cream: #f9f7f2;
     --slate-text: #4a4a4a;
     --white: #ffffff;
-    --accent-gold: #c5a880; /* Subtle color for buttons */
+    --accent-gold: #c5a880;
 }
 
 /* --- GENERAL STYLES --- */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -16,10 +19,7 @@ body {
     background-color: var(--white);
 }
 
-h1, h2, h3 {
-    font-weight: 300;
-    letter-spacing: 1px;
-}
+h1, h2, h3 { font-weight: 300; letter-spacing: 1px; color: var(--slate-text); }
 
 /* --- NAVIGATION --- */
 header {
@@ -31,278 +31,95 @@ header {
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+.navbar { display: flex; justify-content: space-between; align-items: center; }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
+.nav-links { list-style: none; display: flex; align-items: center; gap: 2rem; margin: 0; }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--slate-text);
-    transition: color 0.3s;
-}
+.nav-links a { text-decoration: none; color: var(--slate-text); transition: 0.3s; font-size: 0.95rem; }
 
-.nav-links a:hover {
-    color: var(--primary-sage);
-}
+.nav-links a:hover { color: var(--primary-sage); }
 
 .book-now-btn {
     background-color: var(--primary-sage);
     color: white !important;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 /* --- HERO SECTION --- */
 .hero {
-    height: 70vh;
-    /* CHANGE HERO IMAGE: Replace URL below with your photo */
+    height: 75vh;
+    /* CHANGE HERO IMAGE: Replace the URL below with your high-res spa photo */
     background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
                 url('https://via.placeholder.com/1600x900?text=Serene+Spa+Lobby') no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+    display: flex; align-items: center; justify-content: center; text-align: center; color: white;
 }
 
-.hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+.hero h1 { font-size: 3.5rem; color: white; margin-bottom: 0.5rem; }
 
+/* --- BUTTONS --- */
 .cta-button {
     display: inline-block;
     background-color: var(--accent-gold);
     color: white;
-    padding: 15px 30px;
+    padding: 15px 35px;
     text-decoration: none;
-    margin-top: 20px;
     border-radius: 2px;
-}
-
-/* --- SERVICE SECTIONS --- */
-.service-section {
-    padding: 80px 10%;
-    text-align: center;
-}
-
-.alt-bg {
-    background-color: var(--soft-cream);
-}
-
-.content-grid {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.reverse { flex-direction: row-reverse; }
-
-.image-block img {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-.package-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.card {
-    border: 1px solid #eee;
-    padding: 30px;
-    background: white;
-}
-
-/* --- RESPONSIVE MOBILE FIXES --- */
-.mobile-menu-btn {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
     border: none;
     cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Hidden by default on mobile */
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 20px 0;
-    }
-
-    .nav-links.active { display: flex; }
-
-    .mobile-menu-btn { display: block; }
-
-    .content-grid, .content-grid.reverse {
-        flex-direction: column;
-    }
-}
-
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 40px;
-    font-size: 0.9rem;
-}
-
-/* --- EXISTING THEME COLORS --- */
-:root {
-    --primary-sage: #8da399;
-    --soft-cream: #f9f7f2;
-    --slate-text: #4a4a4a;
-    --white: #ffffff;
-    --accent-gold: #c5a880;
-}
-
-/* ... (Keep previous general styles) ... */
-
-/* --- PRICE TABLE STYLES --- */
-.price-table {
-    width: 100%;
-    margin: 20px 0;
-    border-collapse: collapse;
-    text-align: left;
-}
-
-.price-table td {
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-.price-table td:last-child {
-    text-align: right;
-    font-weight: bold;
-    color: var(--primary-sage);
-}
-
-.cta-button.mini {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-}
-
-/* ... (Keep previous navigation and responsive styles) ... */
-
-/* --- CONTACT SECTION STYLES --- */
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    text-align: left;
-    margin-top: 40px;
-}
-
-.contact-info .contact-item {
-    margin-bottom: 25px;
-}
-
-.contact-info a {
-    color: var(--primary-sage);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.contact-info a:hover {
-    color: var(--accent-gold);
-}
-
-/* --- FORM STYLES --- */
-.contact-form-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form-container input, 
-.contact-form-container textarea {
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-family: inherit;
     font-size: 1rem;
 }
 
-.contact-form-container input:focus, 
-.contact-form-container textarea:focus {
-    outline: none;
-    border-color: var(--primary-sage);
-}
+.cta-button.mini { padding: 8px 20px; font-size: 0.85rem; margin-top: 15px; }
 
-#form-status {
-    margin-top: 15px;
-    font-size: 0.9rem;
-    color: var(--primary-sage);
-}
+/* --- SECTIONS & GRIDS --- */
+.service-section { padding: 80px 10%; text-align: center; }
+.alt-bg { background-color: var(--soft-cream); }
 
-/* Adjusting grid for mobile devices */
+.content-grid { display: flex; align-items: center; gap: 60px; margin-top: 40px; text-align: left; }
+.reverse { flex-direction: row-reverse; }
+
+.text-block { flex: 1; }
+.image-block { flex: 1; }
+.image-block img { width: 100%; border-radius: 4px; display: block; }
+
+/* --- PRICING TABLES --- */
+.price-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+.price-table td { padding: 12px 0; border-bottom: 1px solid #eee; }
+.price-table td:last-child { text-align: right; font-weight: bold; color: var(--primary-sage); }
+
+/* --- PACKAGE CARDS --- */
+.package-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+.card { background: white; padding: 40px; border: 1px solid #eee; transition: 0.3s; }
+.card:hover { border-color: var(--primary-sage); }
+.book-link { color: var(--primary-sage); text-decoration: none; font-weight: bold; }
+
+/* --- FAQ --- */
+.faq-container { max-width: 800px; margin: 40px auto 0; text-align: left; }
+.faq-item { border-bottom: 1px solid #eee; }
+.faq-question { width: 100%; background: none; border: none; padding: 20px 0; font-size: 1.1rem; cursor: pointer; display: flex; justify-content: space-between; color: var(--slate-text); }
+.faq-answer { max-height: 0; overflow: hidden; transition: 0.3s ease-out; color: #666; }
+.faq-answer.open { max-height: 200px; padding-bottom: 20px; }
+.toggle-icon { color: var(--primary-sage); font-weight: bold; }
+
+/* --- CONTACT --- */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; text-align: left; margin-top: 40px; }
+.contact-item { margin-bottom: 20px; }
+.contact-info a { color: var(--primary-sage); text-decoration: none; }
+.contact-form-container form { display: flex; flex-direction: column; gap: 15px; }
+.contact-form-container input, .contact-form-container textarea { padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; }
+
+/* --- RESPONSIVE --- */
+.mobile-menu-btn { display: none; font-size: 1.8rem; background: none; border: none; cursor: pointer; color: var(--primary-sage); }
+
 @media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+    .navbar { position: relative; }
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: -5%; width: 110%; background: white; padding: 20px; box-shadow: 0 10px 10px rgba(0,0,0,0.05); }
+    .nav-links.active { display: flex; }
+    .mobile-menu-btn { display: block; }
+    .content-grid, .content-grid.reverse, .contact-grid { flex-direction: column; grid-template-columns: 1fr; text-align: center; }
+    .hero h1 { font-size: 2.2rem; }
+    .price-table td { font-size: 0.9rem; }
 }
 
-/* --- FAQ SECTION STYLES --- */
-.faq-container {
-    max-width: 800px;
-    margin: 40px auto 0;
-    text-align: left;
-}
-
-.faq-item {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 10px;
-}
-
-.faq-question {
-    width: 100%;
-    background: none;
-    border: none;
-    padding: 20px 10px;
-    font-size: 1.1rem;
-    font-family: inherit;
-    color: var(--slate-text);
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.faq-question:hover {
-    background-color: rgba(141, 163, 153, 0.05); /* Very subtle sage tint */
-}
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease;
-    padding: 0 10px;
-}
-
-/* This class will be toggled by JavaScript */
-.faq-answer.open {
-    max-height: 200px; /* Adjust if your answers are very long */
-    padding: 10px 10px 20px 10px;
-}
-
-.toggle-icon {
-    font-size: 1.5rem;
-    color: var(--primary-sage);
-}
+footer { background: #333; color: #ccc; padding: 40px; text-align: center; font-size: 0.85rem; }
