@@ -160,3 +160,149 @@ footer {
     padding: 40px;
     font-size: 0.9rem;
 }
+
+/* --- EXISTING THEME COLORS --- */
+:root {
+    --primary-sage: #8da399;
+    --soft-cream: #f9f7f2;
+    --slate-text: #4a4a4a;
+    --white: #ffffff;
+    --accent-gold: #c5a880;
+}
+
+/* ... (Keep previous general styles) ... */
+
+/* --- PRICE TABLE STYLES --- */
+.price-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.price-table td {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.price-table td:last-child {
+    text-align: right;
+    font-weight: bold;
+    color: var(--primary-sage);
+}
+
+.cta-button.mini {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+/* ... (Keep previous navigation and responsive styles) ... */
+
+/* --- CONTACT SECTION STYLES --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.contact-info .contact-item {
+    margin-bottom: 25px;
+}
+
+.contact-info a {
+    color: var(--primary-sage);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: var(--accent-gold);
+}
+
+/* --- FORM STYLES --- */
+.contact-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form-container input, 
+.contact-form-container textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact-form-container input:focus, 
+.contact-form-container textarea:focus {
+    outline: none;
+    border-color: var(--primary-sage);
+}
+
+#form-status {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--primary-sage);
+}
+
+/* Adjusting grid for mobile devices */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* --- FAQ SECTION STYLES --- */
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 20px 10px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    color: var(--slate-text);
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background-color: rgba(141, 163, 153, 0.05); /* Very subtle sage tint */
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    padding: 0 10px;
+}
+
+/* This class will be toggled by JavaScript */
+.faq-answer.open {
+    max-height: 200px; /* Adjust if your answers are very long */
+    padding: 10px 10px 20px 10px;
+}
+
+.toggle-icon {
+    font-size: 1.5rem;
+    color: var(--primary-sage);
+}
