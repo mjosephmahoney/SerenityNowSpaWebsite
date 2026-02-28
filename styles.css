@@ -102,6 +102,22 @@ header {
 .faq-answer.open { max-height: 1000px; padding-bottom: 20px; }
 .toggle-icon { color: var(--primary-sage); font-weight: bold; }
 
+/* --- NESTED ACCORDION FIX --- */
+.faq-container.nested {
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.nested .faq-question {
+    font-size: 1rem; /* Slightly smaller for nested items */
+    padding: 15px 5px;
+}
+
+/* Ensure parent can expand even more for nested items */
+.faq-answer.open {
+    max-height: 2000px; /* Increased from 1000px to accommodate nested tables */
+}
+
 /* --- CONTACT --- */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; text-align: left; margin-top: 40px; }
 .contact-item { margin-bottom: 20px; }
