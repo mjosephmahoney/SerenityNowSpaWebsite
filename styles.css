@@ -85,7 +85,7 @@ header {
 
 /* --- PRICING TABLES --- */
 .price-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
-.price-table td { padding: 12px 0; border-bottom: 1px solid #eee; }
+.price-table td { padding: 15px 0; border-bottom: 1px solid #eee; }
 .price-table td:last-child { text-align: right; font-weight: bold; color: var(--primary-sage); }
 
 /* --- PACKAGE CARDS --- */
@@ -99,7 +99,7 @@ header {
 .faq-item { border-bottom: 1px solid #eee; }
 .faq-question { width: 100%; background: none; border: none; padding: 20px 0; font-size: 1.1rem; cursor: pointer; display: flex; justify-content: space-between; color: var(--slate-text); }
 .faq-answer { max-height: 0; overflow: hidden; transition: 0.3s ease-out; color: #666; }
-.faq-answer.open { max-height: 200px; padding-bottom: 20px; }
+.faq-answer.open { max-height: 1000px; padding-bottom: 20px; }
 .toggle-icon { color: var(--primary-sage); font-weight: bold; }
 
 /* --- CONTACT --- */
