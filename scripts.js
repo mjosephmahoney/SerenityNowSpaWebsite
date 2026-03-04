@@ -20,15 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. FAQ ACCORDION logic
     const faqQuestions = document.querySelectorAll('.faq-question');
 
+    // Updated FAQ logic in scripts.js
     faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
+        question.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevents issues with nested elements
             const answer = question.nextElementSibling;
             const icon = question.querySelector('.toggle-icon');
 
-            // Toggle current answer
             answer.classList.toggle('open');
-            
-            // Update icon
             icon.textContent = answer.classList.contains('open') ? '−' : '+';
         });
     });
