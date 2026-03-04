@@ -146,3 +146,32 @@ header {
 }
 
 footer { background: #333; color: #ccc; padding: 40px; text-align: center; font-size: 0.85rem; }
+
+/* Gift Card Section Styling */
+.gift-card-container {
+    margin-top: 60px;
+    padding: 40px;
+    background-color: var(--soft-cream);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.gift-card-container h3 {
+    margin-top: 0;
+    color: var(--primary-sage);
+    font-weight: 400;
+}
+
+.gift-card-container p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    color: var(--slate-text);
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 40px auto;
+    width: 50%;
+}
