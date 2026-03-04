@@ -76,7 +76,7 @@ header {
 .service-section { padding: 80px 10%; text-align: center; }
 .alt-bg { background-color: var(--soft-cream); }
 
-.content-grid { display: flex; align-items: center; gap: 60px; margin-top: 40px; text-align: left; }
+.content-grid { display: flex; align-items: flex-start; gap: 60px; margin-top: 40px; text-align: left; }
 .reverse { flex-direction: row-reverse; }
 
 .text-block { flex: 1; }
