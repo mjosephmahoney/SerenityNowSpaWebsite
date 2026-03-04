@@ -31,6 +31,13 @@ header {
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
+/* Add this to the NAVIGATION section of styles.css */
+.logo {
+    height: 50px;    /* This keeps it small and consistent */
+    width: auto;      /* This maintains the aspect ratio so it doesn't look stretched */
+    display: block;   /* Removes any extra space at the bottom of the image */
+}
+
 .navbar { display: flex; justify-content: space-between; align-items: center; }
 
 .nav-links { list-style: none; display: flex; align-items: center; gap: 2rem; margin: 0; }
