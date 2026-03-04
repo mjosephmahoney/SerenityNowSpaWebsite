@@ -97,7 +97,8 @@ header {
 
 /* --- PACKAGE CARDS --- */
 .package-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-.card { background: white; padding: 40px; border: 1px solid #eee; transition: 0.3s; }
+.card { background: white; padding: 40px; border: 1px solid #eee; transition: 0.3s; display: flex;
+    flex-direction: column; justify-content: space-between;}
 .card:hover { border-color: var(--primary-sage); }
 .book-link { color: var(--primary-sage); text-decoration: none; font-weight: bold; }
 
