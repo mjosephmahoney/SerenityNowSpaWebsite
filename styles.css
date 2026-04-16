@@ -58,7 +58,7 @@ header {
     height: 40vh;
     /* CHANGE HERO IMAGE: Replace the URL below with your high-res spa photo */
     background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
-                url('stonesbamboo.png') no-repeat center center/cover;
+                url('stonesbamboo.webp') no-repeat center center/cover;
     display: flex; align-items: center; justify-content: center; text-align: center; color: white;
 }
 
