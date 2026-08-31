@@ -148,6 +148,17 @@ header {
 
 footer { background: #333; color: #ccc; padding: 40px; text-align: center; font-size: 0.85rem; }
 
+footer .footer-map {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+footer .footer-map iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
 /* Gift Card Section Styling */
 .gift-card-container {
     margin-top: 60px;
