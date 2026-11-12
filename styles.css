@@ -81,6 +81,10 @@ header {
 
 /* --- SECTIONS & GRIDS --- */
 .service-section { padding: 80px 10%; text-align: center; }
+#hiring { text-align: left; }
+#hiring h2,
+#hiring p { text-align: center; }
+#hiring ul { margin: 20px auto 0; padding-left: 1.5rem; max-width: 900px; text-align: left; }
 .alt-bg { background-color: var(--soft-cream); }
 
 .content-grid { display: flex; align-items: flex-start; gap: 60px; margin-top: 40px; text-align: left; }
