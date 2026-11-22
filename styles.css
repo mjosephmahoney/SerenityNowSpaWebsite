@@ -98,6 +98,7 @@ header {
 .price-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
 .price-table td { padding: 15px 0; border-bottom: 1px solid #eee; }
 .price-table td:last-child { text-align: right; font-weight: bold; color: var(--primary-sage); }
+.price-table td.description { text-align: left; font-weight: normal; font-style: normal; color: inherit; }
 
 /* --- PACKAGE CARDS --- */
 .package-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
